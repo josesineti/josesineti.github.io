@@ -4261,7 +4261,7 @@ footer a:hover {
     margin-bottom: 20px;
 }
 
-.mail-subscribe-widget form input[type="text"] {
+.mail-subscribe-widget form input[type="text"], .mail-subscribe-widget form input[type="email"] {
     outline: none;
     color: #888;
     font-size: 12px;
