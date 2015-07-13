@@ -6,7 +6,7 @@ $(function() {
 });
 
 function sendRequest(form) {
-	var url = "http://localhost:9090/portal/listaCorreo/saveEmail";
+	var url = "http://bd-jfsh.rhcloud.com/portal/listaCorreo/saveEmail";
     $.ajax({
         type: "POST",
         url: url,
