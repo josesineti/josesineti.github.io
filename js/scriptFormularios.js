@@ -12,8 +12,8 @@ $(function() {
 });
 
 function sendRequestListaCorreo(form) {
-	//var url = "http://bd-jfsh.rhcloud.com/portal/listaCorreo/saveEmail";
-    var url = "http://localhost:8080/portal/listaCorreo/saveEmail";
+	var url = "http://bd-jfsh.rhcloud.com/portal/listaCorreo/saveEmail";
+    //var url "http://localhost:8080/portal/listaCorreo/saveEmail";
     $.ajax({
         type: "POST",
         url: url,
@@ -48,8 +48,7 @@ function sendRequestListaCorreo(form) {
 }
 
 function sendRequestContacto(form) {
-    //var url = "http://bd-jfsh.rhcloud.com/portal/listaCorreo/saveEmail";
-    var url = "http://localhost:8080/portal/contactos/saveContacto";
+    var url = "http://bd-jfsh.rhcloud.com/portal/contactos/saveContacto";
     $.ajax({
         type: "POST",
         url: url,
