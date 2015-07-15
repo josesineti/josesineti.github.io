@@ -189,7 +189,6 @@
         </header> 
         <!-- End Header Section -->
         
- <!-- ---------------------------------------------------------------------------------------------------------- --> 
  
  <!-- Start Content -->
 <div id="content">
@@ -242,81 +241,6 @@
 		
 	</div>
 </div> 
-						<!-- End Image Service Box 2 -->
-       
-     
-		<!-- Start Map --><script>
-			(function ( $ ) {
-				$.fn.CustomMap = function( options ) {
-					
-					var posLatitude = $('#map').data('position-latitude'),
-					posLongitude = $('#map').data('position-longitude');
-					
-					var settings = $.extend({
-						home: { latitude: posLatitude, longitude: posLongitude },
-						text: '<div class="map-popup"><h4>Web Development | ZoOm-Arts</h4><p>A web development blog for all your HTML5 and WordPress needs.</p></div>',
-						icon_url: $('#map').data('marker-img'),	
-						zoom: 15
-					}, options );
-					
-					var coords = new google.maps.LatLng(settings.home.latitude, settings.home.longitude);
-					
-					return this.each(function() {	
-						var element = $(this);
-						
-						var options = {
-							zoom: settings.zoom,
-							center: coords,
-							mapTypeId: google.maps.MapTypeId.ROADMAP,
-							mapTypeControl: false,
-							scaleControl: false,
-							streetViewControl: false,
-							panControl: true,
-							disableDefaultUI: true,
-							zoomControlOptions: {
-								style: google.maps.ZoomControlStyle.DEFAULT
-							},
-							overviewMapControl: true,	
-						};
-						
-						var map = new google.maps.Map(element[0], options);
-						
-						var icon = { 
-							url: settings.icon_url, 
-							origin: new google.maps.Point(0, 0)
-						};
-						
-						var marker = new google.maps.Marker({
-							position: coords,
-							map: map,
-							icon: icon,
-							draggable: false
-						});
-						
-						var info = new google.maps.InfoWindow({
-							content: settings.text
-						});
-						
-						google.maps.event.addListener(marker, 'click', function() { 
-							info.open(map, marker);
-						});
-						
-						var styles = [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"on"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}];
-						
-						map.setOptions({styles: styles});
-					});
-
-};
-}( jQuery ));
-
-jQuery(document).ready(function() {
-	jQuery('#map').CustomMap();
-});
-</script>
-<!-- End Map -->
-
-
-
 
 <!-- Start Content -->
 <div id="content">
@@ -331,29 +255,28 @@ jQuery(document).ready(function() {
 				
 				<!-- Start Contact Form -->
 				<div id="contact-form" class="contatct-form">
-					<div class="loader"></div>
-					<form action="http://sineti.com/nuevo2015/mail.php" class="contactForm" name="cform" method="post">
+					<form class="contactForm" name="formContacto" id="formContacto" method="post">
 						<div class="row">
 							<div class="col-md-4">
-								<label for="name">Nombre<span class="required">*</span></label>
+								<label for="nombre">Nombre<span class="required">*</span></label>
 								<span class="name-missing">Ingrese su Nombre</span>  
-								<input id="name" name="name" type="text" value="" size="30">
+								<input id="nombre" name="nombre" type="text" required maxlength="100">
 							</div>
 							<div class="col-md-4">
-								<label for="e-mail">Email<span class="required">*</span></label>
+								<label for="email">Email<span class="required">*</span></label>
 								<span class="email-missing">Ingrese su e-mail</span> 
-								<input id="e-mail" name="email" type="text" value="" size="30">
+								<input id="email" name="email" type="email" required maxlength="100">
 							</div>
 							<div class="col-md-4">
-								<label for="url">Teléfono</label>
-								<input id="url" name="url" type="text" value="" size="30">
+								<label for="telefono">Teléfono</label>
+								<input id="telefono" name="telefono" type="tel" maxlength="20">
 							</div>
 						</div>
 						<div class="row">
 							<div class="col-md-12">
-								<label for="message">Mensaje</label>
+								<label for="mensaje">Mensaje</label>
 								<span class="message-missing">Ingresa tu Mensaje!</span>
-								<textarea id="message" name="message" cols="45" rows="10"></textarea>
+								<textarea id="mensaje" name="mensaje" cols="45" rows="10" maxlength="1000"></textarea>
 								<input type="submit" name="submit" class="button" id="submit_btn" value="Enviar Información">
 							</div>
 						</div>
