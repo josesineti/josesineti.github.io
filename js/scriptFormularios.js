@@ -12,8 +12,7 @@ $(function() {
 });
 
 function sendRequestListaCorreo(form) {
-	var url = "http://bd-jfsh.rhcloud.com/portal/listaCorreo/saveEmail";
-    //var url "http://localhost:8080/portal/listaCorreo/saveEmail";
+    var url = "http://bd-jfsh.rhcloud.com/portal/listaCorreo/saveEmail";
     $.ajax({
         type: "POST",
         url: url,
@@ -61,11 +60,9 @@ function sendRequestContacto(form) {
         success: function(response,textStatus){
             if(response == "true") {
                 showToastrSuccess("Suscripción Exitosa", "Pronto recibirás noticias.");
-            } //else if(response == "Ya Suscrito") {
-            //    showToastrSuccess("Ya estabas suscrito", "En breve seguirás recibiendo noticias.");
-            //} else{
-            //    showToastrError("Ocurrió un error", "Error al intentar guardar su correo, intente nuevamente.");
-            //}
+            } else{
+                showToastrError("Ocurrió un error", "Error al intentar guardar su información, intente nuevamente.");
+            }
         },
         error: function(XMLHttpRequest,textStatus,errorThrown){
             if(textStatus == "timeout") {
