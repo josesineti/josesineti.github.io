@@ -270,36 +270,45 @@
 				
 				<!-- Classic Heading -->
 				<h4 class="classic-title"><span>Contactanos</span></h4>
-				
 				<!-- Start Contact Form -->
 				<div id="contact-form" class="contatct-form">
 					<div class="loader"></div>
-					<form action="http://sineti.com/nuevo2015/mail.php" class="contactForm" name="cform" method="post">
-						<div class="row">
-							<div class="col-md-4">
-								<label for="name">Nombre<span class="required">*</span></label>
-								<span class="name-missing">Ingrese su Nombre</span>  
-								<input id="name" name="name" type="text" value="" size="30">
-							</div>
-						  <div class="col-md-4">
-							<label for="e-mail">Email<span class="required">*</span></label>
-						    <span class="email-missing">Ingrese su e-mail</span></div>
-							<div class="col-md-4">
-								<label for="url">Teléfono</label>
-								<input id="url" name="url" type="text" value="" size="30">
-							</div>
-						</div>
-						<div class="row">
-							<div class="col-md-12">
-							  <label for="message">Mensaje</label>
-								<span class="message-missing">Ingresa tu Me<span class="col-md-4">
-								<input id="e-mail" name="email" type="text" value="" size="30">
-								</span>nsaje!</span>
-								<textarea id="message" name="message" cols="45" rows="10"></textarea>
-								<input type="submit" name="submit" class="button" id="submit_btn" value="Enviar Información">
-							</div>
-						</div>
-					</form>
+					<form name="formCV" id="formCV" method="post" enctype="multipart/form-data">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="nombre">Nombre(s)<span class="required">*</span></label>
+                                <span class="name-missing">Ingrese su Nombre</span>  
+                                <input id="nombre" name="nombre" type="text" maxlength="100" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="email">Email<span class="required">*</span></label>
+                                <span class="email-missing">Ingrese su e-mail</span> 
+                                <input id="email" name="email" type="email"  maxlength="100" required>
+                            </div>
+                            <div class="col-md-4">
+                                <label for="telefono">Teléfono</label>
+                                <input id="telefono" name="telefono" type="tel" maxlength="20">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <label for="mensaje">Mensaje</label>
+                                <textarea id="mensaje" name="mensaje" cols="45" rows="10" maxlength="1000" placeholder="En qué podemos ayudarte...."></textarea>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="pdf">CV (Formato pdf)<span class="required">*</label>
+                                <input id="pdf" name="pdf" type="file" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <hr>
+                        </div>
+                        <div class="row">
+                            <input type="submit" name="submit" class="button" id="submit_btn" value="Enviar Información">
+                        </div>
+                    </form>
                     <br>
 				</div>
 				<!-- End Contact Form -->
@@ -347,7 +356,6 @@
         
         
         
- <!-- ---------------------------------------------------------------------------------------------------------- -->               
         
         
         
