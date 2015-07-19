@@ -17,6 +17,7 @@ $(function() {
 
 function sendRequestCV(form) {
     var url = "http://remote.sineti.com:8080/portal/listaCV/saveCV";
+    
     var data = new FormData($(form)[0]);
     $.ajax({
         type: "POST",
