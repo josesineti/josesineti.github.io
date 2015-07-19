@@ -16,7 +16,7 @@ $(function() {
 });
 
 function sendRequestCV(form) {
-    var url = "http://http://remote.sineti.com:8080/portal/listaCV/saveCV";
+    var url = "http://remote.sineti.com:8080/portal/listaCV/saveCV";
     var data = new FormData($(form)[0]);
     $.ajax({
         type: "POST",
@@ -54,7 +54,7 @@ function sendRequestCV(form) {
 }
 
 function sendRequestListaCorreo(form) {
-    var url = "http://http://remote.sineti.com:8080/portal/listaCorreo/saveEmail";
+    var url = "http://remote.sineti.com:8080/portal/listaCorreo/saveEmail";
     $.ajax({
         type: "POST",
         url: url,
@@ -89,7 +89,7 @@ function sendRequestListaCorreo(form) {
 }
 
 function sendRequestContacto(form) {
-    var url = "http://http://remote.sineti.com:8080/portal/contactos/saveContacto";
+    var url = "http://remote.sineti.com:8080/portal/contactos/saveContacto";
     $.ajax({
         type: "POST",
         url: url,
